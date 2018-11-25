@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>首页</title>
+		<link rel="stylesheet" media="screen and (max-width:600px)" href="small.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width:899px) and (min-width:601px)" href="middle.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (min-width:900px)" href="big.css" type="text/css"  />
+		<script type="text/javascript">
+			window.onload=function(){
+				function stopPropagation(e) {
+				   window.event? window.event.cancelBubble = true : e.stopPropagation();
+				}
+				var aCol=['#41a2b7','#2a5d9a','#e66a70','#11a541'];
+				var aLI=document.getElementsByTagName('li');
+				for(var i=0,l=aLI.length;i<l;i++){
+					aLI[i].style.backgroundColor=aCol[i%4];
+				}
+				var submit=document.getElementById('submit');
+				var message=document.getElementById('message');
+				var showLove=document.getElementById('showLove');
+				var text=document.getElementById('text');
+				var form_i=document.getElementById('form_i');
+				showLove.onclick=function (e){
+					message.style.display='flex';
+					text.value='';
+					text.focus();
+				}
+				text.onclick=function(e){
+					stopPropagation(e);
+				}
+				form_i.onclick=function(e){
+					stopPropagation(e);
+				}
+				message.onclick=function(e){
+					message.style.display='none';
+				}
+				submit.onclick=function(){
+					message.style.display='none';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="message" class="message">
+				<form class="form_i" id="form_i" method='post' action='sdfdsf'>
+					<h2>表白信息</h2>
+					<textarea id="text" name="content"  rows="7"></textarea>
+					<input type='submit' id="submit" name='sno2' value='确认'>
+				</form>
+			</div>
+			<div class="head">
+				<img src="bg01.png" alt="">
+				<input type="button" value="Love Letter" id="showLove" />
+				<input type="button" value="Receive" id="Receive" />
+			</div>
+			<div class="main">
+				<ul class="list">
+					<li>
+						<span class=a1 id = "account"> a6457248</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=b1 id = "time">2017-10-09  18:58:37</span>
+						<p id = "unburdenInfo">Abby：今天是2014年2月14日。我写这个网站来庆祝这个特殊的日子。 虽然，我不是一个很擅长表达言语的人。但我希望我们能记住我们在一起的每一刻。今天是二月十四日。祝老婆情人节快乐。我把你的美丽记录在日记里，让文字把你的青春铭记。我把你的笑容粘贴在日记里，让图片把你的活泼记忆。我把我的照片夹进日记里，让爱情把你的幸福牢系。对我来说是个重要的时刻，我发现我已经深深爱上了你！当我凝视你的眼，当我听到你的声音。当我闻到你秀发上淡淡的清香。我爱你当我感受到我剧烈的心跳，我明白了：我想你你在我心中最美。我想照顾你 你是我今生的唯一！所以我继续等待，我有信心，你会。我会永远爱你一直爱你我有一颗永远不变的心认为这是一个重要的决定。你可以在任何时候决定。爱你 = 想你我非常高兴能认识你 </p>
+					</li>
+					<li>
+						<span class=a1> q15164</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=b1>2017-10-09  18:58:37</span>
+						<p>如果，我多一张船票，你会不会跟我一起走？</p>
+					</li>
+					<li>
+						<span class=a1> f123461354</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=b1>2017-10-09  18:58:37</span>
+						<p >I have crossed oceans of time to find you.</p>
+					</li>
+					<li>
+						<span class=a1> r546515354</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=b1>2017-10-09  18:58:37</span>
+						<p >You will never age for me, nor fade, nor die.</p>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

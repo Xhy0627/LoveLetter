@@ -1,0 +1,22 @@
+{
+    "unburden1":{
+        "account":{"type":"string"},
+        "to":{"type":"string"},
+        "unburdenInfo":{"type":"string"},
+        "card":{"type":"string"},
+		"time:{"type":"string"}
+    },
+    "unburden2":{
+        "to":{"type":"string"},
+        "from":{"type":"string"},
+		"time:{"type":"string"}
+    },
+
+    "getUnburden":{
+      "account":{"type":"string"},
+      "to":{"type":"string"},
+      "unburdenInfo":{"type":"string"},
+      "card":{"type":"string"},
+	  "time:{"type":"string"}
+    }
+}
